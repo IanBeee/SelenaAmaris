@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Selena</title>
+<style>
+    /* Reset margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(ufo.webp), url(ufo.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(108, 211, 245, 0.1);
+    backdrop-filter: blur(10px); 
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Links styling */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Sembunyikan menu di perangkat kecil */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(108, 211, 245, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Tampilkan menu saat aktif */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Jarak antar item menu */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .hamburger {
+        display: block; /* Tampilkan ikon hamburger di perangkat kecil */
+    }
+}
+
+
+/* Gaya untuk container */
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 90px 20px 20px; /* Tambahkan padding-top untuk menghindari tabrakan dengan navbar */
+}
+
+/* Gaya untuk card profile */
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* Gaya untuk gambar profil */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid blue; /* add a 3px solid blue border */
+}
+
+/* Gaya untuk nama */
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk profesi dan deskripsi */
+.profession {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk tombol */
+.small-text {
+    font-size: 0.5em; /* 50% dari ukuran font normal */
+}
+
+</style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Happy Birthday</div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="my.html">About My</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="profile-card">
+            <img src="https://pbs.twimg.com/profile_images/1842256643591229440/KrwaKKUU_400x400.jpg" alt="Profile Picture" class="profile-img">
+            <h1 class="name">Selena AmariS Ch【We Livers】</h1>
+            <h4 class="profession">
+                kepada Selena Amaris <br>
+                Seorang Vtuber alien <br>
+                Yang memiliki bakat <br>
+                Bakat yang ia kembangkan sendiri <br>
+                Bakat yang membuatku tertarik <br>
+                tertarik dari senjak pertama kali bertemu <br>
+                Dan sampai saat ini  <br>
+                Walau sudah lupa kapan pertama kali bertemu <br>
+                Semoga tak membuatku lupa dengan kak selen <br>
+                Dengan nyanyianmu yang merdu <br>
+                Walau kak Selen seorang alien <br>
+                semoga kedatanganmu dihidupku <br>
+                akan membuatku lebih bahagia <br>
+                Walau aku hanya orang yang halu <br>
+                Aku akan berubah <span class="small-text">kayaknya</span>
+            </h4>
+        </div>
+    </div>
+
+    <script>
+            
+        const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Tambah atau hapus kelas 'active'
+});
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Selena</title>
+    <style>
+        /* Reset margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(ufo.webp), url(ufo.jpg); /* fallback image format */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(108, 211, 245, 0.1);
+    backdrop-filter: blur(10px); 
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Links styling */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Sembunyikan menu di perangkat kecil */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Posisi di bawah navbar */
+        left: 0;
+        background-color: rgba(108, 211, 245, 0.2);
+
+  
+    }
+
+    .nav-links.active {
+        display: flex; /* Tampilkan menu saat aktif */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Jarak antar item menu */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .hamburger {
+        display: block; /* Tampilkan ikon hamburger di perangkat kecil */
+    }
+}
+
+/* Gaya untuk container */
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Gaya untuk card profile */
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.3); /* adjust opacity to see the blur effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* add blur effect to the background */
+}
+
+/* Gaya untuk gambar profil */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid blue; /* add a 3px solid blue border */
+}
+
+/* Gaya untuk nama */
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk profesi dan deskripsi */
+.profession, .description {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk tombol */
+.small-text {
+    font-size: 0.5em; /* 50% dari ukuran font normal */
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.yt-btn {
+    background-color: #FF0000; /* Warna merah YouTube */
+    color: white; /* Warna teks putih */
+    padding: 10px 20px;
+    border-radius: 9999px; /* Membuat tombol berbentuk pill */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.yt-btn:hover {
+    background-color: #cc0000; /* Warna merah lebih gelap saat di-hover */
+}
+
+.x-btn {
+    background-color: #000000; /* Warna hitam X */
+    color: white; /* Warna teks putih */
+    padding: 10px 20px;
+    border-radius: 9999px; /* Membuat tombol berbentuk pill */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.x-btn:hover {
+    background-color: #333333; /* Warna hitam lebih terang saat di-hover */
+}
+
+.ig-btn {
+    background: linear-gradient(45deg, #833AB4, #E1306C, #FD1D1D, #F56040, #FCAF45); /* Gradien warna Instagram */
+    color: white; /* Warna teks putih */
+    padding: 10px 20px;
+    border-radius: 9999px; /* Membuat tombol berbentuk oval/pill */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Efek hover untuk tombol */
+.ig-btn:hover {
+    opacity: 0.9; /* Membuat tombol sedikit transparan saat di-hover */
+}
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Happy Birthday</div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="About.html">About</a></li>
+            <li><a href="myword.html">My Word</a></li>
+            <li><a href="my.html">About My</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="profile-card">
+            <img src="https://pbs.twimg.com/profile_images/1842256643591229440/KrwaKKUU_400x400.jpg" alt="Profile Picture" class="profile-img">
+            <h1 class="name">Selena AmariS Ch【We Livers】</h1>
+            <p class="profession"><h2>Happy Birthday</h2> <b> untuk Alien-Nya AmaiAmaii :) semoga kedepannya bisa terus menghibur AmaiAmaii (Anda senang kita juga <span class="small-text">semoga</span>) </b> </p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@SelenaAmariS" target="_blank" class="yt-btn">YouTube</a>
+                <a href="https://x.com/selenaamariz" target="_blank" class="x-btn">X</a>
+                <a href="https://www.instagram.com/selenaamariz/" target="_blank" class="ig-btn">instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Tambah atau hapus kelas 'active'
+});
+
+    </script>
+
+</body>
+</html>

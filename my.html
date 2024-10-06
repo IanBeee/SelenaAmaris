@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Selena</title>
+<style>
+        /* Reset margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(ufo.webp), url(ufo.jpg); /* fallback image format */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(108, 211, 245, 0.1);
+    backdrop-filter: blur(10px); 
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Links styling */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Sembunyikan menu di perangkat kecil */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Posisi di bawah navbar */
+        left: 0;
+        background-color: rgba(108, 211, 245, 0.2);
+
+  
+    }
+
+    .nav-links.active {
+        display: flex; /* Tampilkan menu saat aktif */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Jarak antar item menu */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .hamburger {
+        display: block; /* Tampilkan ikon hamburger di perangkat kecil */
+    }
+}
+
+/* Gaya untuk container */
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Gaya untuk card profile */
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.3); /* adjust opacity to see the blur effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* add blur effect to the background */
+}
+
+/* Gaya untuk gambar profil */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid blue; /* add a 3px solid blue border */
+}
+
+/* Gaya untuk nama */
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk profesi dan deskripsi */
+.profession, .description {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk tombol */
+.small-text {
+    font-size: 0.7em; /* 50% dari ukuran font normal */
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.osu-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
+.osu-btn img {
+    width: 50px; /* Ukuran logo lebih kecil */
+    height: 50px; /* Ukuran logo lebih kecil */
+    margin-right: 8px; /* Jarak antara logo dan teks */
+        }
+
+.x-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.x-btn img {
+    width: 50px; /* Ukuran logo lebih kecil */
+    height: 50px; /* Ukuran logo lebih kecil */
+    margin-right: 8px; /* Jarak antara logo dan teks */
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Happy Birthday</div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="myword.html">My Word</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="profile-card">
+            <img src="https://yt3.googleusercontent.com/TT7nDPHL-6tH9Q4s4_wbAD_WnzOyolKM2Vr7EaNynS60DzppbrzCrkvGURYo9bcFfBadlqO8=s160-c-k-c0x00ffffff-no-rj" alt="Profile Picture" class="profile-img">
+            <h1 class="name">IanBee</h1>
+            <p class="profession"><b>  Hi aku IanBee orang yang sedang belajar tantang hidup <span class="small-text">(kayaknya)</span> </b> </p>
+            <div class="social-links">
+                <a href="https://osu.ppy.sh/users/36693027" target="_blank" class="osu-btn"><img src="https://i.ppy.sh/013ed2c11b34720790e74035d9f49078d5e9aa64/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f4272616e645f6964656e746974795f67756964656c696e65732f696d672f75736167652d66756c6c2d636f6c6f75722e706e67" alt="Osu Logo"></a>
+                <a href="https://x.com/IanBeewww?t=gQjJHILwbHYrxqOXRqcJcA&s=09" target="_blank" class="x-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X logo"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Tambah atau hapus kelas 'active'
+});
+
+    </script>
+
+</body>
+</html>
